@@ -1,0 +1,1413 @@
+@import "./media.scss";
+@import "./props.scss";
+
+*body,
+input,
+a {
+  font-family: "Poppins", sans-serif !important;
+}
+
+.header {
+  // position: relative;
+  // top: 0;
+  // left: 0;
+  // right: 0;
+  // width: 100%;
+  // padding-top: 65px;
+
+  // display: flex;
+  // align-items: center;
+  // justify-content: center;
+  // z-index: 999;
+  display: flex;
+  align-items: center;
+  height: 110px;
+  justify-content: center;
+  left: 0;
+  position: absolute;
+  right: 0;
+  top: 0;
+  width: 100%;
+  z-index: 1000;
+
+  .wrapper {
+    display: flex;
+    align-items: center;
+
+    .ls {
+      flex: 1;
+      position: relative;
+
+      .logo {
+        // width: 230px;
+        height: 58px;
+
+        @include media("<=sm") {
+          width: 148px;
+          height: 48px;
+        }
+
+        // @include media("<=xsm") {
+        //   width: 118px;
+        //   height: 38px;
+        // }
+      }
+    }
+
+    .rs {
+      position: relative;
+
+      .wallet-btn {
+        padding: 8px 14px;
+        background: linear-gradient(145deg, #159ffc, #a344df);
+        // min-width: 200px;
+        // height: 56px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 8px;
+        color: #fff;
+        font-weight: 500;
+        font-size: 17px;
+        border-radius: 6px;
+
+        &:hover {
+          opacity: 0.9;
+        }
+
+        @include media("<=sm") {
+          min-width: 180px;
+          height: 56px;
+          font-size: 14px;
+        }
+
+        // @include media("<=xsm") {
+        //   min-width: 160px;
+        //   height: 56px;
+        //   font-size: 12px;
+        //   font-weight: 600;
+        // }
+
+        .icon {
+          display: flex;
+          align-items: center;
+
+          svg {
+            width: 20px;
+            height: 18px;
+            color: #fff;
+          }
+        }
+      }
+    }
+  }
+}
+
+// home
+.home {
+  padding: 200px 0 130px;
+  position: relative;
+  overflow: hidden;
+  .wrapper {
+    display: flex;
+    gap: 80px;
+
+    @include media("<=lg") {
+      width: 100%;
+      padding: 0 20px;
+      flex-direction: column;
+    }
+
+    .ls {
+      flex: 1;
+      position: relative;
+
+      .ls-circle {
+        min-width: 465px;
+        height: 525px;
+        background: linear-gradient(45deg, #159ffc, #a344df);
+        border-radius: 50%;
+        position: absolute;
+        left: -380px;
+        top: -600px;
+        filter: blur(170px);
+        z-index: -1;
+
+        // @include media("<=sm") {
+        //   width: 265px;
+        //   height: 348px;
+        // }
+      }
+
+      .buttons {
+        background-position: center;
+        background-size: cover;
+        background-repeat: no-repeat;
+        width: 100%;
+        height: 74px;
+        background: rgb(44, 37, 37);
+        border-radius: 20px;
+        overflow: hidden;
+        display: flex;
+
+        @include media("<=sm") {
+          height: 60px;
+        }
+
+        .link {
+          color: #fff;
+          font-size: 24px;
+          font-weight: 500;
+          flex: 1;
+          height: 100%;
+
+          @include media("<=sm") {
+            font-size: 16px;
+          }
+
+          // &:hover {
+          //   background: linear-gradient(45deg, #c213c8, #e069e4);
+          // }
+
+          &.active {
+            color: #fff;
+            background: linear-gradient(96.37deg, #159ffc 0%, #a344df 105.9%);
+            height: 100%;
+          }
+        }
+      }
+
+      //Stake-card
+
+      .stake-card {
+        width: 100%;
+        background: linear-gradient(#03022a, #03022a) padding-box,
+          linear-gradient(120deg, #1b9cfb, #954de2) border-box;
+        border: 2px solid transparent;
+        border-radius: 20px;
+        border-style: solid;
+        margin-top: 30px;
+
+        .box-heading {
+          display: flex;
+          align-items: center;
+          border-bottom: 2px solid transparent;
+          border-image: linear-gradient(90deg, #1b9cfb, #954de2) 2;
+          padding: 18px 30px;
+          justify-content: space-between;
+          @include media("<=sm") {
+            padding: 15px;
+          }
+
+          .stake-ls {
+            position: relative;
+            display: flex;
+            align-items: center;
+            img {
+              width: 70px;
+              height: 70px;
+              @include media("<=sm") {
+                width: 40px;
+                height: 40px;
+              }
+            }
+          }
+
+          .rs {
+            font-size: 22px;
+            font-weight: 600;
+            color: #fff;
+
+            @include media("<=sm") {
+              font-size: 18px;
+            }
+          }
+        }
+
+        .stake-text {
+          // padding: 43px 67px 119px 60px;
+          padding: 30px;
+
+          @include media("<=sm") {
+            // padding: 20px 24px 24px 20px;
+            padding: 20px;
+          }
+
+          .info-item {
+            padding-bottom: 12px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            border-bottom: 2px solid transparent;
+            border-image: linear-gradient(90deg, #1b9cfb, #954de2) 2;
+
+            .ap-ls {
+              color: #fff;
+              font-size: 20px;
+
+              @include media("<=sm") {
+                font-size: 16px;
+              }
+            }
+
+            .ap-rs {
+              color: #fff;
+              font-size: 20px;
+
+              @include media("<=sm") {
+                font-size: 16px;
+              }
+            }
+          }
+
+          .choose-day {
+            margin-top: 30px;
+
+            @include media("<=sm") {
+              margin-top: 20px;
+            }
+
+            h1 {
+              margin-bottom: 6px;
+              color: #fff;
+              font-weight: 500;
+              font-size: 18px;
+
+              @include media("<=sm") {
+                font-size: 14px;
+                margin-bottom: 10px;
+              }
+            }
+
+            .day-input {
+              cursor: pointer;
+              width: 100%;
+              background: linear-gradient(#03022a, #03022a) padding-box,
+                linear-gradient(120deg, #1b9cfb, #954de2) border-box;
+              border: 2px solid transparent;
+              display: flex;
+              align-items: center;
+              justify-content: space-between;
+              padding: 25px;
+              border-radius: 10px;
+
+              @include media("<=sm") {
+                padding: 15px;
+              }
+
+              .day {
+                font-size: 20px;
+                color: #fff;
+
+                @include media("<=sm") {
+                  font-size: 14px;
+                }
+              }
+
+              .arrow {
+                display: flex;
+                align-items: center;
+                justify-content: center;
+
+                svg {
+                  width: 20px;
+                  height: 20px;
+
+                  @include media("<=sm") {
+                    width: 16px;
+                    height: 16px;
+                  }
+                }
+              }
+            }
+          }
+
+          .field-amount {
+            display: flex;
+            align-items: center;
+            margin-top: 30px;
+
+            @include media("<=sm") {
+              margin-top: 30px;
+            }
+
+            .ls-fld {
+              flex: 1;
+              font-size: 18px;
+              color: #fff;
+              font-weight: 500;
+
+              @include media("<=sm") {
+                font-size: 14px;
+              }
+            }
+
+            .rs-fld {
+              font-size: 18px;
+              color: #fff;
+              font-weight: 500;
+
+              @include media("<=sm") {
+                font-size: 14px;
+              }
+            }
+          }
+
+          .balance {
+            background: linear-gradient(#03022a, #03022a) padding-box,
+              linear-gradient(120deg, #1b9cfb, #954de2) border-box;
+            border: 2px solid transparent;
+            width: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 40px;
+            // gap: 60px;
+            // padding: 25px 32px;
+            padding: 8px 12px;
+            margin-top: 8px;
+            border-radius: 10px;
+
+            @include media("<=sm") {
+              padding: 15px;
+            }
+
+            .num {
+              width: 100%;
+              color: #fff;
+              font-size: 16px;
+
+              @include media("<=sm") {
+                font-size: 14px;
+              }
+            }
+
+            .balance-btn {
+              display: flex;
+              align-items: center;
+              gap: 10px;
+              .plp-btn {
+                color: #8d8bec;
+                font-size: 20px;
+                font-weight: 500;
+
+                @include media("<=sm") {
+                  font-size: 14px;
+                }
+              }
+
+              .max-btn {
+                background-color: #2c2a82;
+                width: 50px;
+                height: 40px;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                color: #fff;
+                border-radius: 8px;
+                font-size: 18px;
+                font-weight: 500;
+
+                &:hover {
+                  opacity: 0.9;
+                }
+
+                @include media("<=sm") {
+                  font-size: 14px;
+                  width: 40px;
+                  height: 40px;
+                }
+              }
+            }
+          }
+
+          .approve-btn {
+            margin-top: 80px;
+            width: 100%;
+            border-radius: 4px;
+            font-size: 18px;
+            font-weight: 600;
+            color: #fff;
+            padding: 12px 20px;
+            background: linear-gradient(90deg, #159ffc, #a344df);
+            &:hover {
+              opacity: 0.6;
+            }
+
+            @include media("<=sm") {
+              font-size: 16px;
+              margin-top: 60px;
+              height: 45px;
+            }
+          }
+        }
+      }
+
+      //unStake-card
+      .unStake-card {
+        width: 100%;
+        border-radius: 20px;
+        background: linear-gradient(#03022a, #03022a) padding-box,
+          linear-gradient(120deg, #1b9cfb, #954de2) border-box;
+        border: 2px solid transparent;
+        margin-top: 30px;
+        // padding: 54px 68px 119px 68px;
+
+        .box-heading {
+          display: flex;
+          align-items: center;
+          border-bottom: 2px solid transparent;
+          border-image: linear-gradient(90deg, #1b9cfb, #954de2) 2;
+          padding: 20px 30px;
+
+          @include media("<=sm") {
+            padding: 15px;
+          }
+
+          .ls {
+            display: flex;
+            align-items: center;
+
+            img {
+              width: 70px;
+              height: 70px;
+              @include media("<=sm") {
+                width: 40px;
+                height: 40px;
+              }
+            }
+          }
+
+          .rs {
+            font-size: 22px;
+            font-weight: 600;
+            color: #fff;
+
+            @include media("<=sm") {
+              font-size: 18px;
+            }
+          }
+        }
+
+        .unStake-text {
+          // padding: 43px 67px 119px 60px;
+          padding: 30px;
+
+          @include media("<=sm") {
+            // padding: 20px 24px 24px 20px;
+            padding: 20px;
+          }
+
+          .info-item {
+            // padding-bottom: 20px;
+            padding-bottom: 8px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            border-bottom: 2px solid transparent;
+            border-image: linear-gradient(90deg, #1b9cfb, #954de2) 2;
+            .pen-ls {
+              color: #fff;
+              font-size: 20px;
+              @include media("<=sm") {
+                font-size: 16px;
+              }
+            }
+            .pen-rs {
+              color: #ff0000;
+              font-size: 20px;
+              @include media("<=sm") {
+                font-size: 16px;
+              }
+            }
+          }
+          .previous-invest {
+            margin-top: 30px;
+
+            @include media("<=sm") {
+              margin-top: 12px;
+            }
+
+            h1 {
+              margin-bottom: 8px;
+              color: #fff;
+              font-weight: 500;
+              font-size: 18px;
+
+              @include media("<=sm") {
+                font-size: 14px;
+                margin-bottom: 10px;
+              }
+            }
+
+            .day-input {
+              width: 100%;
+              background: linear-gradient(#03022a, #03022a) padding-box,
+                linear-gradient(120deg, #1b9cfb, #954de2) border-box;
+              border: 2px solid transparent;
+              display: flex;
+              align-items: center;
+              justify-content: space-between;
+              padding: 25px;
+              // padding: 25px 34px;
+              border-radius: 10px;
+              cursor: pointer;
+
+              @include media("<=sm") {
+                padding: 15px;
+              }
+
+              .num {
+                font-size: 20px;
+                color: #fff;
+
+                @include media("<=sm") {
+                  font-size: 14px;
+                }
+              }
+
+              .arrow {
+                display: flex;
+                align-items: center;
+
+                svg {
+                  width: 20px;
+                  height: 20px;
+
+                  @include media("<=sm") {
+                    width: 16px;
+                    height: 16px;
+                  }
+                }
+              }
+            }
+          }
+
+          .time-filed {
+            display: flex;
+            align-items: center;
+            justify-content: end;
+            gap: 6px;
+            margin-top: 26px;
+
+            @include media("<=sm") {
+              display: grid;
+              grid-template-columns: repeat(4, 1fr);
+            }
+
+            .count {
+              min-width: 34px;
+              min-height: 34px;
+              display: flex;
+              align-items: center;
+              justify-content: center;
+              background: linear-gradient(90deg, #159ffc, #a344df);
+              font-size: 16px;
+              font-weight: 600;
+              color: #fff;
+              border-radius: 1.65px;
+
+              @include media("<=sm") {
+                min-width: 18px;
+                min-height: 18px;
+                font-size: 14px;
+              }
+            }
+
+            .text-time {
+              font-size: 16px;
+              font-weight: 500;
+              color: #fff;
+
+              @include media("<=sm") {
+                font-size: 14px;
+              }
+            }
+          }
+
+          .approve-btn {
+            margin-top: 160px;
+            width: 100%;
+            border-radius: 4px;
+            font-size: 18px;
+            font-weight: 600;
+            color: #fff;
+            padding: 12px 20px;
+            background: linear-gradient(90deg, #159ffc, #a344df);
+            &:hover {
+              opacity: 0.6;
+            }
+
+            @include media("<=sm") {
+              font-size: 16px;
+              margin-top: 60px;
+              height: 45px;
+            }
+          }
+        }
+      }
+
+      //Reward-card
+      .reward-card {
+        width: 100%;
+        border-radius: 20px;
+        background: linear-gradient(#03022a, #03022a) padding-box,
+          linear-gradient(120deg, #1b9cfb, #954de2) border-box;
+        border: 2px solid transparent;
+        margin-top: 30px;
+        // padding: 54px 68px 119px 68px;
+
+        .box-heading {
+          display: flex;
+          align-items: center;
+          border-bottom: 2px solid transparent;
+          border-image: linear-gradient(90deg, #1b9cfb, #954de2) 2;
+          padding: 18px 30px;
+
+          @include media("<=sm") {
+            padding: 15px;
+          }
+
+          .ls {
+            display: flex;
+            align-items: center;
+            img {
+              width: 70px;
+              height: 70px;
+              @include media("<=sm") {
+                width: 40px;
+                height: 40px;
+              }
+            }
+          }
+
+          .rs {
+            font-size: 22px;
+            font-weight: 600;
+            color: #fff;
+
+            @include media("<=sm") {
+              font-size: 18px;
+            }
+          }
+        }
+
+        .reward-text {
+          // padding: 43px 67px 119px 60px;
+          padding: 30px;
+
+          @include media("<=sm") {
+            // padding: 20px 24px 24px 20px;
+            padding: 20px;
+          }
+
+          .info-item {
+            padding-bottom: 8px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            border-bottom: 2px solid transparent;
+            border-image: linear-gradient(90deg, #1b9cfb, #954de2) 2;
+            .earn-ls {
+              color: #fff;
+              font-size: 20px;
+              @include media("<=sm") {
+                font-size: 14px;
+              }
+            }
+
+            .earn-rs {
+              color: #ff0000;
+              font-size: 20px;
+              font-weight: 600;
+              @include media("<=sm") {
+                font-size: 14px;
+              }
+            }
+          }
+
+          .droan-filed {
+            display: flex;
+            align-items: center;
+            margin-top: 20px;
+
+            @include media("<=sm") {
+              margin-top: 15px;
+            }
+
+            .withdroan-text {
+              flex: 1;
+              font-size: 20px;
+              color: #fff;
+
+              @include media("<=sm") {
+                font-size: 14px;
+              }
+            }
+
+            .num {
+              font-size: 20px;
+              color: #fff;
+              font-weight: 600;
+
+              @include media("<=sm") {
+                font-size: 14px;
+              }
+            }
+          }
+
+          .claim-filed {
+            margin-top: 20px;
+            display: flex;
+            align-items: center;
+
+            @include media("<=sm") {
+              margin-top: 25px;
+            }
+
+            .claim-text {
+              flex: 1;
+              font-size: 18px;
+              font-weight: 600;
+              color: #fff;
+
+              @include media("<=sm") {
+                font-size: 14px;
+              }
+            }
+
+            .num {
+              font-size: 20px;
+              color: #fff;
+              font-weight: 600;
+
+              @include media("<=sm") {
+                font-size: 14px;
+              }
+            }
+          }
+
+          .reward-invest {
+            margin-top: 20px;
+
+            @include media("<=sm") {
+              margin-top: 25px;
+            }
+
+            h1 {
+              margin-bottom: 8px;
+              color: #fff;
+              font-weight: 600;
+              font-size: 18px;
+
+              @include media("<=sm") {
+                font-size: 14px;
+              }
+            }
+
+            .reward-input {
+              width: 100%;
+              background: linear-gradient(#03022a, #03022a) padding-box,
+                linear-gradient(120deg, #1b9cfb, #954de2) border-box;
+              border: 2px solid transparent;
+              border-radius: 10px;
+              display: flex;
+              align-items: center;
+              justify-content: space-between;
+              padding: 25px;
+              // padding: 25px 34px;
+              cursor: pointer;
+
+              @include media("<=sm") {
+                padding: 15px;
+              }
+
+              .num {
+                font-size: 20px;
+                color: #fff;
+
+                @include media("<=sm") {
+                  font-size: 16px;
+                }
+              }
+
+              .arrow {
+                display: flex;
+                align-items: center;
+
+                svg {
+                  width: 20px;
+                  height: 20px;
+
+                  @include media("<=sm") {
+                    width: 16px;
+                    height: 16px;
+                  }
+                }
+              }
+            }
+          }
+
+          .eam-filed {
+            display: flex;
+            align-items: center;
+            justify-content: end;
+            gap: 5px;
+            margin-top: 21px;
+
+            @include media("<=sm") {
+              margin-top: 14px;
+            }
+
+            .text-eam {
+              font-size: 20px;
+              font-weight: 500;
+              color: #fff;
+
+              @include media("<=sm") {
+                font-size: 14px;
+              }
+            }
+
+            .count {
+              display: flex;
+              align-items: center;
+              justify-content: center;
+              font-size: 25px;
+              font-weight: 600;
+              color: #5178f0;
+
+              @include media("<=sm") {
+                font-size: 14px;
+              }
+            }
+          }
+          .approve-btn {
+            margin-top: 60px;
+            width: 100%;
+            border-radius: 4px;
+            font-size: 18px;
+            font-weight: 600;
+            color: #fff;
+            padding: 12px 20px;
+            background: linear-gradient(90deg, #159ffc, #a344df);
+            &:hover {
+              opacity: 0.6;
+            }
+
+            @include media("<=sm") {
+              font-size: 16px;
+              margin-top: 60px;
+              height: 45px;
+            }
+          }
+        }
+      }
+    }
+
+    .rs {
+      position: relative;
+      // margin-top: 130px;
+
+      // @include media("<=lg") {
+      //   margin-top: 30px;
+      // }
+
+      .rs-circle {
+        width: 360px;
+        height: 425px;
+        background: linear-gradient(45deg, #159ffc, #a344df);
+        border-radius: 50%;
+        position: absolute;
+        right: -200px;
+        top: -500px;
+        filter: blur(170px);
+        z-index: -1;
+      }
+
+      .payment-box {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 25px;
+        margin-top: 130px;
+
+        .tol_invest {
+          width: 100%;
+          background: linear-gradient(#03022a, #03022a) padding-box,
+            linear-gradient(120deg, #1b9cfb, #954de2) border-box;
+          border: 2px solid transparent;
+          padding: 30px;
+          border-top-right-radius: 35px;
+
+          @include media("<=sm") {
+            border-top-right-radius: 20px;
+            padding: 15px;
+          }
+
+          .invest {
+            font-size: 20px;
+            font-weight: 400;
+            color: #fff;
+            margin-bottom: 10px;
+
+            @include media("<=sm") {
+              font-size: 14px;
+            }
+          }
+
+          .total-num {
+            color: #fff;
+            font-weight: 700;
+            font-size: 24px;
+
+            @include media("<=sm") {
+              font-size: 14px;
+            }
+          }
+        }
+
+        .tol_Ear {
+          width: 100%;
+          background: linear-gradient(#03022a, #03022a) padding-box,
+            linear-gradient(120deg, #1b9cfb, #954de2) border-box;
+          border: 2px solid transparent;
+          padding: 30px;
+          border-top-right-radius: 35px;
+
+          @include media("<=sm") {
+            border-top-right-radius: 20px;
+            padding: 15px;
+          }
+
+          .earning {
+            font-size: 20px;
+            font-weight: 400;
+            color: #fff;
+            margin-bottom: 10px;
+
+            @include media("<=sm") {
+              font-size: 14px;
+            }
+          }
+
+          .total-num {
+            color: #fff;
+            font-weight: 700;
+            font-size: 24px;
+
+            @include media("<=sm") {
+              font-size: 14px;
+            }
+          }
+        }
+
+        .tol_Bal {
+          width: 100%;
+          background: linear-gradient(#03022a, #03022a) padding-box,
+            linear-gradient(120deg, #1b9cfb, #954de2) border-box;
+          border: 2px solid transparent;
+          padding: 30px;
+          border-top-right-radius: 35px;
+
+          @include media("<=sm") {
+            border-top-right-radius: 20px;
+            padding: 15px;
+          }
+
+          .balance {
+            font-size: 20px;
+            font-weight: 400;
+            color: #fff;
+            margin-bottom: 10px;
+
+            @include media("<=sm") {
+              font-size: 14px;
+            }
+          }
+
+          .total-num {
+            color: #fff;
+            font-weight: 700;
+            font-size: 24px;
+
+            @include media("<=sm") {
+              font-size: 14px;
+            }
+          }
+        }
+
+        .tol_Ref {
+          width: 100%;
+          background: linear-gradient(#03022a, #03022a) padding-box,
+            linear-gradient(120deg, #1b9cfb, #954de2) border-box;
+          border: 2px solid transparent;
+          padding: 30px;
+          border-top-right-radius: 35px;
+
+          @include media("<=sm") {
+            border-top-right-radius: 20px;
+            padding: 15px;
+          }
+
+          .referr {
+            font-size: 20px;
+            font-weight: 400;
+            color: #fff;
+            margin-bottom: 10px;
+
+            @include media("<=sm") {
+              font-size: 14px;
+            }
+          }
+
+          .total-num {
+            color: #fff;
+            font-weight: 700;
+            font-size: 24px;
+
+            @include media("<=sm") {
+              font-size: 14px;
+            }
+          }
+        }
+      }
+
+      .link-box {
+        // border-image: linear-gradient(120deg, #1b9cfb, #954de2) 2;
+        // border-width: 2px;
+        // border-radius: 20px;
+        // border-style: solid;
+        background: linear-gradient(#03022a, #03022a) padding-box,
+          linear-gradient(120deg, #1b9cfb, #954de2) border-box;
+        border: 2px solid transparent;
+        width: 100%;
+        cursor: pointer;
+        padding: 44px 45px 30px 35px;
+        border-top-right-radius: 35px;
+        margin-top: 25px;
+
+        @include media("<=sm") {
+          padding: 15px;
+          // border-top-right-radius: 22px;
+        }
+
+        .text {
+          display: flex;
+          align-items: center;
+          gap: 10px;
+          margin-bottom: 15px;
+
+          .link-name {
+            font-size: 20px;
+            font-weight: 400;
+            color: #fff;
+
+            @include media("<=sm") {
+              font-size: 14px;
+            }
+          }
+
+          .link_icon {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            svg {
+              width: 30px;
+              height: 30px;
+
+              @include media("<=sm") {
+                width: 20px;
+                height: 20px;
+              }
+            }
+          }
+        }
+
+        .url {
+          font-size: 22px;
+          font-weight: 400;
+          color: #e069e4;
+          font-family: "Roboto";
+
+          @include media("<=sm") {
+            font-size: 14px;
+          }
+        }
+      }
+    }
+  }
+}
+
+@mixin dropDownAnim($duration: 0.3s) {
+  animation-name: drop;
+  animation-duration: $duration;
+  transform-origin: top;
+}
+
+//Drop Down
+.dropDown {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  position: relative;
+  .flex {
+    display: flex;
+  }
+  .col {
+    flex-direction: column;
+  }
+  .aic {
+    align-items: center;
+  }
+  .abs {
+    position: absolute;
+  }
+  .category {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    .cbox {
+      display: flex;
+      align-items: center;
+      position: relative;
+      cursor: pointer;
+      border: 1px solid #954de2;
+      padding: 14px 16px;
+      min-height: 42px;
+      border-radius: 5px;
+      box-sizing: border-box;
+      min-width: 180px;
+      width: 100%;
+      justify-content: space-between;
+      @media (max-width: 480px) {
+        min-width: 150px;
+      }
+      .icon-arrow {
+        svg {
+          path {
+            fill: #159ffc;
+          }
+        }
+      }
+      .arrow-icon {
+        height: 16px;
+        width: 16px;
+      }
+      .slt {
+        display: flex;
+        align-items: center;
+        overflow: hidden;
+        .ico {
+          cursor: pointer;
+          color: #000000d9;
+          height: 22px;
+          display: flex;
+          align-items: center;
+        }
+        .lbl {
+          color: #000;
+          padding: 0 10px;
+        }
+        .unit-name {
+          display: flex;
+          align-items: center;
+          .unit-eng {
+            font-size: 16px;
+            font-weight: 600;
+            display: flex;
+            align-items: center;
+            color: #fff;
+          }
+        }
+      }
+      .d-img {
+        margin: 2px 10px;
+        .img {
+          height: 25px;
+          width: 25px;
+          padding: 2.5px;
+          border-radius: 100%;
+          border: 1px solid #159ffc;
+        }
+      }
+      .edit-icon {
+        margin: 2px 10px;
+        padding: 4px;
+        border-radius: 100%;
+        border: 1px solid #159ffc;
+      }
+      .dropDown-icon {
+        cursor: pointer;
+      }
+    }
+  }
+  .block {
+    top: 55px;
+    left: 0;
+    right: 0;
+    border-radius: 4px;
+    border: 1px solid #159ffc;
+    background: linear-gradient(96.37deg, #159ffc 0%, #a344df 105.9%);
+    box-shadow: 0 4px 8px rgb(0 0 0 / 10%);
+    visibility: hidden;
+    opacity: 0;
+    z-index: 2;
+    width: 100%;
+    .manue {
+      width: 100%;
+      // height: 150px;
+      overflow-y: auto;
+      padding: 0px 0px;
+      &::-webkit-scrollbar {
+        width: 4px;
+      }
+      .slt {
+        width: 100%;
+        padding: 8px 16px;
+        // @include anim;
+        &.active {
+          background-color: #159ffc;
+          color: #242424;
+          .unit-name {
+            justify-content: space-between;
+            .unit-eng {
+              color: #242424;
+            }
+          }
+        }
+        .unit-name {
+          .unit-eng {
+            color: #eee;
+          }
+        }
+        .ico {
+          justify-content: flex-start;
+          margin-right: 8px;
+          width: 25px;
+          height: 25px;
+        }
+        .lbl {
+          flex: 1;
+          margin-left: 5px;
+          justify-content: flex-start;
+        }
+        &:hover {
+          // background-color: #333;
+          cursor: pointer;
+          .ico {
+            color: #159ffc;
+          }
+          .lbl {
+            color: #159ffc;
+          }
+        }
+      }
+    }
+    &.show {
+      display: flex;
+      visibility: visible;
+      opacity: 1;
+      @include dropDownAnim;
+    }
+  }
+}
+
+.timer-comp {
+  display: flex;
+  align-items: center;
+  justify-content: end;
+}
+.timer-box {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+.timer-comp .time-item {
+  min-width: max-content;
+  display: flex;
+  color: #ffffff;
+  padding: 8px 6px;
+  border-radius: 8px;
+  align-items: center;
+  justify-content: space-between;
+}
+.timer-comp .time-item ._vale {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
+  font-size: 12px;
+  height: 24px;
+  width: 24px;
+  padding: 2px;
+  border-radius: 4px;
+  background: linear-gradient(96.37deg, #159ffc 0%, #a344df 89.57%);
+}
+.timer-comp .time-item ._tag {
+  font-size: 12px;
+  margin-left: 4px;
+  @media (max-width: 480px) {
+    font-size: 10px;
+    margin-left: 2px;
+  }
+}
+
+
+
+
+
+.confirmation-popup-body {
+  width: 650px;
+  height: 300px;
+  padding: 48px 60px;
+        background: linear-gradient(45deg, #159ffc, #a344df);
+  @include media("<=sm") {
+    width: 310px;
+    height: 100%;
+    padding: 20px;
+  }
+  .title {
+    color: #fff;
+    text-align: center;
+    font-size: 28px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 30px;
+    @include media("<=sm") {
+      font-size: 18px;
+    }
+  }
+  .desc {
+    color: #fff;
+    text-align: center;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 22px;
+    margin: 20px 0;
+    @include media("<=sm") {
+      font-size: 12px;
+    }
+  }
+  .actions {
+    gap: 20px;
+    @include media("<=sm") {
+      flex-direction: column;
+    }
+    .btn-c {
+      width: 100%;
+      font-size: 16px;
+      font-weight: 600;
+      // border-radius: 6px;
+      border: 1px solid;
+      border-image: linear-gradient(90deg, #c1ab73 0%, #ff7bac 100%);
+      border-image-slice: 1;
+      &:last-child {
+        background: transparent;
+      }
+    }
+  }
+}
