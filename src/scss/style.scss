@@ -56,7 +56,6 @@ a {
 
     .rs {
       position: relative;
-      width: 50%;
       .wallet-btn {
         padding: 8px 14px;
         background: linear-gradient(145deg, #159ffc, #a344df);
@@ -907,6 +906,7 @@ a {
 
     .rs {
       position: relative;
+      width: 50%;
       // margin-top: 130px;
 
       // @include media("<=lg") {
