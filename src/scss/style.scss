@@ -216,9 +216,12 @@ a {
             font-size: 22px;
             font-weight: 600;
             color: #fff;
+            padding-left: 140px;
 
             @include media("<=sm") {
               font-size: 18px;
+              padding-left: 220px;
+
             }
           }
         }
@@ -481,9 +484,12 @@ a {
             font-size: 22px;
             font-weight: 600;
             color: #fff;
+            padding-left: 140px;
 
             @include media("<=sm") {
               font-size: 18px;
+              padding-left: 220px;
+
             }
           }
         }
@@ -685,8 +691,12 @@ a {
             font-weight: 600;
             color: #fff;
 
+            padding-left: 140px;
+
             @include media("<=sm") {
               font-size: 18px;
+              padding-left: 220px;
+
             }
           }
         }
