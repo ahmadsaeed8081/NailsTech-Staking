@@ -5,8 +5,8 @@ const DropDown = ({ selectedValue, setSelectedValue }) => {
   const [hide, setHide] = useState(false);
   //   const [selectedValue, setSelectedValue] = useState("");
   const dropDownList = [
-    { label: "90 Days", value: "90%", index: "0"},
-    { label: "30 Days", value: "60%", index: "1" },
+    { label: "90 Days", value: "200%", index: "0"},
+    { label: "30 Days", value: "100%", index: "1" },
     { label: "7 Days", value: "30%", index: "2" },
   ];
   useEffect(() => {
