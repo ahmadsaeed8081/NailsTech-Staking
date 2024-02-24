@@ -907,6 +907,10 @@ a {
     .rs {
       position: relative;
       width: 50%;
+      
+      @include media("<=sm") {
+        width: 100%;
+      }
       // margin-top: 130px;
 
       // @include media("<=lg") {
